@@ -1,0 +1,105 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FAFCFD;
+  color: #141A20;
+
+}
+
+.btnTransparente{
+
+  background: none;  
+  border: none;  
+  cursor: pointer;
+  
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+}
+
+.header .logo img {
+  width: 100px;
+}
+
+
+/* Video de fondo */
+.video-background {
+  border-radius: 10px;
+  background-color: rgb(250, 250, 211);
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  justify-items: center;
+  padding: 200px;
+
+}
+
+#botonesVideo{
+
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#textosVideo{
+
+  text-align: center;
+
+}
+
+/* Sección destacada */
+.destacados {
+  padding: 40px;
+  background-color: #FAFCFD;
+}
+
+.destacados h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #141A20;
+}
+
+.videos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.video {
+  width: 30%;
+  text-align: center;
+}
+
+.video img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #141A20;
+}
+
+/* Pie de página */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color:white;
+  color: #FAFCFD;
+}
