@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vimeo - Página de inicio</title>
   <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <!-- Encabezado -->
   <header class="header">
+
     <div class="logo">
+
       <img src="imagenes/logo_vimeo.png" alt="Vimeo">
+
     </div>
-    <div>
+    <div id="headerDerecha">
       <button class="btnTransparente">Iniciar sesión</button>
-      <button id="btnUnirse">Unirse</button>
+      <button class="btnDefecto">Unirse</button>
+      <svg class="tresBarras" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+        fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3 5.5C3 4.94772 3.44772 4.5 4 4.5H20C20.5523 4.5 21 4.94772 21 5.5V6.5C21 7.05228 20.5523 7.5 20 7.5H4C3.44772 7.5 3 7.05228 3 6.5V5.5ZM3 11.5C3 10.9477 3.44772 10.5 4 10.5H20C20.5523 10.5 21 10.9477 21 11.5V12.5C21 13.0523 20.5523 13.5 20 13.5H4C3.44772 13.5 3 13.05228 3 12.5V11.5ZM4 16.5C3.44772 16.5 3 16.9477 3 17.5V18.5C3 19.0523 3.44772 19.5 4 19.5H20C20.5523 19.5 21 19.0523 21 18.5V17.5C21 16.9477 20.5523 16.5 20 16.5H4Z"
+          fill="currentColor"></path>
+      </svg>
     </div>
-    
+
   </header>
 
   <!-- Video de fondo -->
   <div class="video-background">
+
+    <div id="videoFondo">
+      <video autoplay muted loop playsinline>
+        <source
+          src="https://player.vimeo.com/progressive_redirect/playback/1069021926/rendition/720p/file.mp4?loc=external&amp;signature=8cfe0374460e6987523da7a4a3ad195acf04529e4c45a6bc90ef38b520611f72"
+          type="video/mp4">
+      </video>
+    </div>
+
     <div id="textosVideo">
       <h3>SU PLATAFORMA DE VIDEO COMPLETA</h3>
-      <h1>Sus videos a su manera</h1>
-      <p>La plataforma sin anuncios de Vimeo le ofrece todo lo que necesita para alojar, gestionar y compartir videos de alta calidad.</p>
+
+      <div id="tituloVideo">
+        <h1>Sus videos, a su manera</h1>
+      </div>
+      <div id="parrafoVideo">
+        <p>La plataforma sin anuncios de Vimeo le ofrece todo lo que necesita para alojar, gestionar y compartir videos
+          de alta calidad.</p>
+      </div>
+
+      <div id="botonesVideo">
+      <!-- Los svg son copiados de la pagina para tener las mismas flechas, las añado dentro de mis botones -->
+
+      <button class="btnDefecto">Ver los planes <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+          fill="none" aria-hidden="true" color="inherit" viewBox="0 0 24 25" aria-labelledby=""
+          style="color: currentcolor;">
+          <path fill="currentColor"
+            d="m15.335 13.332-3.661 3.74a.983.983 0 1 0 1.405 1.376l5.136-5.246c.38-.388.38-1.018 0-1.406L13.079 6.55a.983.983 0 1 0-1.405 1.376l3.66 3.74h-8.5a.833.833 0 0 0 0 1.666z">
+          </path>
+        </svg></button>
+      <button class="btnTransparente">Probar gratis<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+          fill="none" aria-hidden="true" color="inherit" viewBox="0 0 24 25" aria-labelledby=""
+          style="color: currentcolor;">
+          <path fill="currentColor"
+            d="m15.335 13.332-3.661 3.74a.983.983 0 1 0 1.405 1.376l5.136-5.246c.38-.388.38-1.018 0-1.406L13.079 6.55a.983.983 0 1 0-1.405 1.376l3.66 3.74h-8.5a.833.833 0 0 0 0 1.666z">
+          </path>
+        </svg></button>
     </div>
-    <div id="botonesVideo">
-      <button>Ver los planes &#8594</button>
-      <button class="btnTransparente">Probar gratis &#8594</button>
+
     </div>
     
+
   </div>
 
   <!-- Sección destacada -->
-  <section class="destacados">
+  <div class="destacados">
     <h2>Contenido destacado</h2>
     <div class="videos">
       <div class="video">
@@ -50,11 +98,12 @@
         <p>Video 3</p>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Pie de página -->
   <footer class="footer">
     <p>&copy; 2025 Vimeo, Inc.</p>
   </footer>
 </body>
+
 </html>

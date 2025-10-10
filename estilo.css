@@ -1,15 +1,23 @@
-/* Reset de estilos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Lexend";
   background-color: #FAFCFD;
   color: #141A20;
+
+}
+
+#headerDerecha{
+
+  display: flex;
+  align-items: center; /* centra verticalmente los botones y la barra */
+  gap: 15px;  
+
+}
+
+.tresBarras{
+
+  margin-left: 10px;
 
 }
 
@@ -18,7 +26,25 @@ body {
   background: none;  
   border: none;  
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  width: 177px;
+  font-family: "Lexend";
   
+}
+
+.btnDefecto{
+  display: flex;
+  padding: 20px;
+  background-color: #17d5ff;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  width: 177px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Lexend";
 }
 
 /* Encabezado */
@@ -38,28 +64,75 @@ body {
 
 /* Video de fondo */
 .video-background {
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: rgb(250, 250, 211);
-  width: 80%;
+  width: 960px; 
   margin: auto;
-  height: 100%;
+  height: 829px;
   justify-items: center;
-  padding: 200px;
+  position: relative;
 
 }
 
-#botonesVideo{
+#videoFondo video {
+  
+  position: absolute;/* Cuando quiera poner un video de fondo, necesito poner en posicion absoluta el video y el div donde se contenga el video en relative */
 
+  /* top 0, left 0, width y height al 100% y object-fit cover, lo que hace siempre que este bien puesto la posicion absoluta en el video, es hacer que se ajusten las esquinas y se posicione y se cuadricule bien por todo el div */
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 0; 
+  /* Para indicar que el video estara por detras de los textos y los botones, le ponemos el valor mas bajo, 0 */
+}
+
+#botonesVideo{
+  gap: 20px;
   display: flex;
   flex-direction: column;
   width: 160px;
   justify-content: center;
   margin-top: 20px;
+  z-index: 2; /* mayor que el video, osea para que se vea encima del video, ya que el video tiene z-index 0*/
+}
+
+#botonesVideo button{
+  font-family: "Lexend";
 }
 
 #textosVideo{
 
+  position: absolute;
+
+  inset: 0; /* Equivale a escribir top: 0, right: 0, left: 0, bottom: 0, y sirve para colocar el texto, el cual esta dentro de un div, en el centro */
+
+  z-index: 2; /* mayor que el video, osea para que se vea encima del video, ya que el video tiene z-index 0*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  color: #fff;
   text-align: center;
+  width: 92%;
+
+}
+
+#tituloVideo{
+
+  text-align: center;
+  width: 45%;
+
+}
+
+#parrafoVideo{
+
+  text-align: center;
+  width: 45%;
 
 }
 
