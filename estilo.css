@@ -155,15 +155,18 @@ body {
 
 }
 
-#trozoConFondoDif{
-  margin-top: 50px;
+#trozoConFondoDif {
+  margin: 0; /* elimina espacio arriba y abajo */
+  padding: 40px 0; /* opcional: espacio interno dentro del bloque */
   width: 100%;
-  height: 437px ;
   background-image: 
-     linear-gradient(rgba(248, 251, 253, 0.96), rgba(248, 251, 253, 0.96)), /* capa blanca translúcida */
-    url("https://vimeo.bynder.com/m/68c7ef88b8fed205/original/Vector-Vimeo-Logo.svg");
+     linear-gradient(rgba(248, 251, 253, 0.96), rgba(248, 251, 253, 0.96)), 
+     url("https://vimeo.bynder.com/m/68c7ef88b8fed205/original/Vector-Vimeo-Logo.svg");
+  
   text-align: center;
 }
+
+
 
 #textosConFondoDif{
 
@@ -174,6 +177,23 @@ body {
 
 }
 
+/* Trozo negro */
+#trozoNegro {
+  margin: 0; /* elimina espacio entre este div y el anterior */
+  padding: 40px 0; /* opcional: espacio interno */
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#textoFondoNegro{
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  
+}
+
 
 
 /* Pie de página */
@@ -182,4 +202,111 @@ body {
   padding: 20px;
   background-color:white;
   color: #FAFCFD;
+}
+
+/* =======================
+   MODO MÓVIL (RESPONSIVE)
+   ======================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-direction: row;              /* mantiene todo en una línea */
+    justify-content: space-between;   /* separa logo e items */
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  #headerDerecha {
+    flex-direction: row;              /* botones en horizontal */
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btnDefecto,
+  .btnTransparente {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .tresBarras {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* VIDEO PRINCIPAL */
+  .video-background {
+    width: 95%;
+    height: auto;
+    aspect-ratio: 4/6;  /* Esto sirve para que el aspecto de este caso el video, sea basicamente la altura respecto el ancho, es decir, lo que yo estoy poniendo aqui es que por cada 4 unidades de ancho, seran 6 de altura, por lo cual siempre que se cambie de movil o dispostivo el aspecto respondera según el dispositivo */
+    border-radius: 15px;
+  }
+
+  #textosVideo {
+    padding: 10px;
+    width: 100%;
+  }
+
+  #tituloVideo {
+    width: 90%;
+  }
+
+  #tituloVideo h1 {
+    font-size: 22px;        /* tamaño más pequeño */
+  }
+
+  #parrafoVideo {
+    width: 90%;
+  }
+
+  #parrafoVideo p {
+    font-size: 14px;        /* texto más legible y compacto */
+  }
+
+  #botonesVideo {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  #botonesVideo button {
+    width: 75%;
+    max-width: 240px;
+  }
+
+  /* Texto debajo del video */
+  #textoPostVideo {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  #textosConFondoDif {
+    width: 90%;
+  }
+
+  #textosConFondoDif h1 {
+    font-size: 20px;
+  }
+
+  #textosConFondoDif p {
+    font-size: 14px;
+  }
+
+  #trozoConFondoDif {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  /* Barra inferior */
+  #barraVideo img {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+  }
 }
