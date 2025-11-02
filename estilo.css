@@ -34,7 +34,8 @@ body {
   
 }
 
-.btnDefecto{
+.btnDefecto {
+
   display: flex;
   padding: 20px;
   background-color: #17d5ff;
@@ -45,6 +46,7 @@ body {
   text-align: center;
   justify-content: center;
   font-family: "Lexend";
+
 }
 
 /* Encabezado */
@@ -174,7 +176,6 @@ body {
   margin: 30px auto; /* centra y deja un pequeño espacio debajo del video */
   text-align: center;
 
-
 }
 
 /* Trozo negro */
@@ -191,10 +192,6 @@ body {
   text-align: center;
   width: 600px;
   margin: auto;
-  
-}
-
-.subtitulosParteNegra{
   
 }
 
@@ -243,7 +240,7 @@ body {
   .video-background {
     width: 95%;
     height: auto;
-    aspect-ratio: 4/6;  /* Esto sirve para que el aspecto de este caso el video, sea basicamente la altura respecto el ancho, es decir, lo que yo estoy poniendo aqui es que por cada 4 unidades de ancho, seran 6 de altura, por lo cual siempre que se cambie de movil o dispostivo el aspecto respondera según el dispositivo */
+    aspect-ratio: 4/4;  /* Esto sirve para que el aspecto de este caso el video, sea basicamente la altura respecto el ancho, es decir, lo que yo estoy poniendo aqui es que por cada 4 unidades de ancho, seran 6 de altura, por lo cual siempre que se cambie de movil o dispostivo el aspecto respondera según el dispositivo */
     border-radius: 15px;
   }
 
@@ -252,12 +249,18 @@ body {
     width: 100%;
   }
 
+   #textosVideo h3 {
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
   #tituloVideo {
     width: 90%;
   }
 
   #tituloVideo h1 {
-    font-size: 22px;        /* tamaño más pequeño */
+    font-size: 32px;        /* tamaño más pequeño */
   }
 
   #parrafoVideo {
