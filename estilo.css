@@ -1,41 +1,35 @@
-
 /* Estilos generales */
 body {
-  font-family: "Lexend";
+  font-family: "Lexend", sans-serif;
   background-color: #FAFCFD;
   color: #141A20;
-
+  margin: 0;
+  padding: 0;
 }
 
-#headerDerecha{
-
+.headerDerecha {
   display: flex;
   align-items: center; /* centra verticalmente los botones y la barra */
-  gap: 15px;  
-
+  gap: 15px;
 }
 
-.tresBarras{
-
+.tresBarras {
   margin-left: 10px;
-
 }
 
-.btnTransparente{
-
-  background: none;  
-  border: none;  
+.btnTransparente {
+  background: none;
+  border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   font-size: 16px;
   width: 177px;
-  font-family: "Lexend";
-  
+  font-family: "Lexend", sans-serif;
+  color: inherit;
 }
 
 .btnDefecto {
-
   display: flex;
   padding: 20px;
   background-color: #17d5ff;
@@ -45,8 +39,7 @@ body {
   width: 177px;
   text-align: center;
   justify-content: center;
-  font-family: "Lexend";
-
+  font-family: "Lexend", sans-serif;
 }
 
 /* Encabezado */
@@ -61,58 +54,51 @@ body {
 
 .header .logo img {
   width: 100px;
+  display: block;
 }
 
-
 /* Video de fondo */
-.video-background {
+.videoBackground {
   border-radius: 20px;
   background-color: rgb(250, 250, 211);
-  width: 960px; 
-  margin: auto;
+  width: 960px;
+  margin: 24px auto;
   height: 829px;
   justify-items: center;
   position: relative;
-
+  overflow: hidden;
 }
 
-#videoFondo video {
-  
-  position: absolute;/* Cuando quiera poner un video de fondo, necesito poner en posicion absoluta el video y el div donde se contenga el video en relative */
-
-  /* top 0, left 0, width y height al 100% y object-fit cover, lo que hace siempre que este bien puesto la posicion absoluta en el video, es hacer que se ajusten las esquinas y se posicione y se cuadricule bien por todo el div */
-
+.videoFondo video {
+  position: absolute; /* video en fondo */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  z-index: 0; 
-  /* Para indicar que el video estara por detras de los textos y los botones, le ponemos el valor mas bajo, 0 */
+  z-index: 0;
 }
 
-#botonesVideo{
+/* Contenedores de texto sobre el video */
+.botonesVideo {
   gap: 20px;
   display: flex;
   flex-direction: column;
   width: 160px;
   justify-content: center;
   margin-top: 20px;
-  z-index: 2; /* mayor que el video, osea para que se vea encima del video, ya que el video tiene z-index 0*/
+  z-index: 2;
 }
 
-#botonesVideo button{
-  font-family: "Lexend";
+.botonesVideo button {
+  font-family: "Lexend", sans-serif;
 }
 
-#textosVideo{
-
+.textosVideo {
   position: absolute;
-
-  inset: 0; /* Equivale a escribir top: 0, right: 0, left: 0, bottom: 0, y sirve para colocar el texto, el cual esta dentro de un div, en el centro */
-
-  z-index: 2; /* mayor que el video, osea para que se vea encima del video, ya que el video tiene z-index 0*/
+  inset: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,88 +107,160 @@ body {
   color: #fff;
   text-align: center;
   width: 92%;
-
 }
 
-#tituloVideo{
-
+.tituloVideo {
   text-align: center;
   width: 45%;
   font-size: 30px;
 }
 
-#parrafoVideo{
-
+.parrafoVideo {
   text-align: center;
   width: 45%;
-
 }
 
-#textoPostVideo {
+/* Texto posterior al video */
+.textoPostVideo {
   width: 490px;
-  margin: 30px auto; /* centra y deja un pequeño espacio debajo del video */
+  margin: 30px auto;
   text-align: center;
 }
 
-
-#barraVideo{
-
+.barraVideo {
   width: 100%;
-
+  margin: 12px 0 32px 0;
 }
 
-#subtituloVideo{
+.barraVideo img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
+.subtituloVideo {
   text-align: center;
-
 }
 
-#trozoConFondoDif {
-  margin: 0; /* elimina espacio arriba y abajo */
-  padding: 40px 0; /* opcional: espacio interno dentro del bloque */
+/* Trozo con fondo distinto */
+.trozoConFondoDif {
+  margin: 0;
+  padding: 40px 0;
   width: 100%;
-  background-image: 
-     linear-gradient(rgba(248, 251, 253, 0.96), rgba(248, 251, 253, 0.96)), 
-     url("https://vimeo.bynder.com/m/68c7ef88b8fed205/original/Vector-Vimeo-Logo.svg");
-  
+  background-image: linear-gradient(rgba(248, 251, 253, 0.96), rgba(248, 251, 253, 0.96)),
+    url("https://vimeo.bynder.com/m/68c7ef88b8fed205/original/Vector-Vimeo-Logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
 
-
-
-#textosConFondoDif{
-
+.textosConFondoDif {
   width: 490px;
-  margin: 30px auto; /* centra y deja un pequeño espacio debajo del video */
+  margin: 30px auto;
   text-align: center;
-
 }
 
 /* Trozo negro */
-#trozoNegro {
-  margin: 0; /* elimina espacio entre este div y el anterior */
-  padding: 40px 0; /* opcional: espacio interno */
+.trozoNegro {
+  margin: 0;
+  padding: 40px 0;
   background-color: black;
   color: white;
   width: 100%;
   text-align: center;
 }
 
-#textoFondoNegro{
+.textoFondoNegro {
   text-align: center;
   width: 600px;
   margin: auto;
-  
 }
 
+/* Videos en la parte negra */
+.videosParteNegra {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 28px;
+}
 
+.videoCardItem {
+  width: 320px;
+  text-align: left;
+}
+
+.videoCard {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #111;
+}
+
+.subtitulosParteNegra {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.botonParteNegra {
+  margin-top: 12px;
+  padding: 14px 18px;
+  background: #2b3438;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sección solución para videos */
+.solucionParaVideos {
+  width: 92%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.videoColeWebley .videoCard {
+  height: 560px;
+  border-radius: 12px;
+}
+
+.subituloParteColeWebley {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.parrafoColeWebley {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.tituloColeWebley h1 {
+  font-size: 40px;
+  margin: 0 0 12px 0;
+}
+
+.parrafoPostTitulo p {
+  color: #374151;
+  line-height: 1.6;
+}
 
 /* Pie de página */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color:white;
-  color: #FAFCFD;
+  background-color: white;
+  color: #141A20;
 }
 
 /* =======================
@@ -212,14 +270,14 @@ body {
 
   /* HEADER */
   .header {
-    flex-direction: row;              /* mantiene todo en una línea */
-    justify-content: space-between;   /* separa logo e items */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
 
-  #headerDerecha {
-    flex-direction: row;              /* botones en horizontal */
+  .headerDerecha {
+    flex-direction: row;
     align-items: center;
     gap: 8px;
   }
@@ -237,81 +295,95 @@ body {
   }
 
   /* VIDEO PRINCIPAL */
-  .video-background {
+  .videoBackground {
     width: 95%;
     height: auto;
-    aspect-ratio: 4/4;  /* Esto sirve para que el aspecto de este caso el video, sea basicamente la altura respecto el ancho, es decir, lo que yo estoy poniendo aqui es que por cada 4 unidades de ancho, seran 6 de altura, por lo cual siempre que se cambie de movil o dispostivo el aspecto respondera según el dispositivo */
+    aspect-ratio: 4/4;
     border-radius: 15px;
   }
 
-  #textosVideo {
+  .textosVideo {
     padding: 10px;
     width: 100%;
   }
 
-   #textosVideo h3 {
+  .textosVideo h3 {
     padding: 10px;
     width: 100%;
     font-size: 14px;
   }
 
-  #tituloVideo {
+  .tituloVideo {
     width: 90%;
   }
 
-  #tituloVideo h1 {
-    font-size: 32px;        /* tamaño más pequeño */
+  .tituloVideo h1 {
+    font-size: 32px;
   }
 
-  #parrafoVideo {
+  .parrafoVideo {
     width: 90%;
   }
 
-  #parrafoVideo p {
-    font-size: 14px;        /* texto más legible y compacto */
+  .parrafoVideo p {
+    font-size: 14px;
   }
 
-  #botonesVideo {
+  .botonesVideo {
     flex-direction: column;
     align-items: center;
     width: 100%;
     gap: 8px;
   }
 
-  #botonesVideo button {
+  .botonesVideo button {
     width: 75%;
     max-width: 240px;
   }
 
-  /* Texto debajo del video */
-  #textoPostVideo {
+  .textoPostVideo {
     width: 90%;
     font-size: 14px;
   }
 
-  #textosConFondoDif {
+  .textosConFondoDif {
     width: 90%;
   }
 
-  #textosConFondoDif h1 {
+  .textosConFondoDif h1 {
     font-size: 20px;
   }
 
-  #textosConFondoDif p {
+  .textosConFondoDif p {
     font-size: 14px;
   }
 
-  #trozoConFondoDif {
+  .trozoConFondoDif {
     height: auto;
     padding-bottom: 40px;
   }
 
-  /* Barra inferior */
-  #barraVideo img {
+  .barraVideo img {
     width: 100%;
   }
 
-  /* Footer */
+  .videosParteNegra {
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .videoCardItem {
+    width: 100%;
+  }
+
+  .videoColeWebley .videoCard {
+    height: auto;
+  }
+
+  .solucionParaVideos {
+    grid-template-columns: 1fr;
+  }
+
   .footer {
     text-align: center;
     font-size: 13px;
