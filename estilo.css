@@ -78,10 +78,12 @@ body {
   object-fit: cover;
   border-radius: 20px;
   z-index: 0;
+  /* le digo 0 a z-index para indicar que el video sera el que estara de fondo, a partir de ahora si pongo un valor mas alto de 0, se pondran las cosas encima del video */
 }
 
 /* Contenedores de texto sobre el video */
 .botonesVideo {
+   /* z-index hace que en este caso, los botones se vean por delante que el video de fondo */
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -96,6 +98,7 @@ body {
 }
 
 .textosVideo {
+  /* z-index hace que en este caso, los textos se vean por delante que el video de fondo */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -149,8 +152,6 @@ body {
   width: 100%;
   background-image: linear-gradient(rgba(248, 251, 253, 0.96), rgba(248, 251, 253, 0.96)),
     url("https://vimeo.bynder.com/m/68c7ef88b8fed205/original/Vector-Vimeo-Logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   text-align: center;
 }
 
@@ -183,6 +184,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  /* flex wrap sirve para que mis videos en este caso, cuando no haya mas espacio en el contenedor por ejemplo, hay una linea de 3 videos y ya no hay mas espacio para otro video, pues comience en la siguiente fila */
   padding: 28px;
 }
 
@@ -192,6 +194,7 @@ body {
 }
 
 .videoCard {
+  /* display block para que ocupe todo el ancho del contenedor segun el width que le de */
   display: block;
   width: 100%;
   height: 180px;
