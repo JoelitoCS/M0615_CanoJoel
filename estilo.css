@@ -189,7 +189,6 @@ body {
 }
 
 .videoCardItem {
-  width: 320px;
   text-align: left;
 }
 
@@ -197,7 +196,7 @@ body {
   /* display block para que ocupe todo el ancho del contenedor segun el width que le de */
   display: block;
   width: 100%;
-  height: 180px;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
   background: #111;
