@@ -189,12 +189,13 @@ body {
 }
 
 .videoCardItem {
+  width: 320px;     /* ancho de la tarjeta */
   text-align: left;
 }
 
 .videoCard {
   /* display block para que ocupe todo el ancho del contenedor segun el width que le de */
-  display: block;
+  display: flex;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -217,6 +218,22 @@ body {
   border-radius: 12px;
   border: none;
   cursor: pointer;
+  font-size: 16px;
+  font-family: "Lexend", sans-serif;ç
+  justify-items: ;
+}
+
+.botonParteNegra:hover {
+  background-color:#fff;
+  color:#2b3438;
+
+}
+
+.videoCardItem button {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Sección solución para videos */
