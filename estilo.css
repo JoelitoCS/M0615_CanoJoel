@@ -288,6 +288,19 @@ body {
   border: none;
   font-size: 16px;
   font-family: "Lexend", sans-serif;
+  cursor: pointer;
+}
+
+.botonColeWebley:hover{
+  background-color: white;
+  color: #141A20;
+  
+}
+
+.botonColeWebley:hover svg{
+  
+  fill
+  
 }
 
 .botonColeWebley svg{
