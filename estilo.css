@@ -179,13 +179,15 @@ body {
 
 /* Videos en la parte negra */
 .videosParteNegra {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
   /* flex wrap sirve para que mis videos en este caso, cuando no haya mas espacio en el contenedor por ejemplo, hay una linea de 3 videos y ya no hay mas espacio para otro video, pues comience en la siguiente fila */
   padding: 28px;
+  
 }
 
 .videoCardItem {
@@ -208,6 +210,7 @@ body {
   color: #fff;
   font-weight: 700;
   margin-top: 12px;
+  font-size: 18px;
 }
 
 .botonParteNegra {
@@ -219,8 +222,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Lexend", sans-serif;ç
-  justify-items: ;
+  font-family: "Lexend", sans-serif;
 }
 
 .botonParteNegra:hover {
@@ -234,6 +236,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
 /* Sección solución para videos */
