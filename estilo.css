@@ -280,8 +280,9 @@ body {
 }
 
 .videoColeWebley .videoCard {
-  height: 560px;
+  height: 785px;
   border-radius: 12px;
+  width: 576px;
 }
 
 .subituloParteColeWebley {
@@ -343,6 +344,33 @@ body {
   display: flex;
   justify-content: center;
 }
+
+#listaAlLadoVideo li {
+  list-style: none;
+}
+
+#listaAlLadoVideo a {
+  text-decoration: none;
+  color: #141A20;
+  font-weight: 600;
+}
+
+#listaAlLadoVideo p {
+  text-decoration: none;
+  color: #4C5864;
+  font-weight: 400;
+}
+
+#listaAlLadoVideo svg {
+  margin-left: 15px;
+}
+
+#videoConListaJuntos{
+  display: flex;
+  
+}
+
+
 
 /* Pie de página */
 .footer {
