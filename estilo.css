@@ -29,6 +29,17 @@ body {
   color: inherit;
 }
 
+.btnTransparente svg{
+  margin-left: 10px;
+  display: flex;
+  justify-items: center;
+  margin-top: 2px;
+}
+
+.btnTransparente:hover{
+  opacity: 50%;
+}
+
 .btnDefecto {
   display: flex;
   padding: 20px;
@@ -40,6 +51,18 @@ body {
   text-align: center;
   justify-content: center;
   font-family: "Lexend", sans-serif;
+  cursor: pointer;
+}
+
+.btnDefecto svg {
+  margin-left: 10px;
+  display: flex;
+  justify-items: center;
+  margin-top: 2px;
+}
+
+.btnDefecto:hover {
+  background-color: rgb(169, 169, 235);
 }
 
 /* Encabezado */
@@ -233,6 +256,11 @@ body {
 
 }
 
+.botonParteNegra:hover svg path {
+  stroke: #141A20;
+
+}
+
 .videoCardItem button {
   
   display: flex;
@@ -297,9 +325,10 @@ body {
   
 }
 
-.botonColeWebley:hover svg{
+/* esto me permite cambiar el color de mi svg, he tenido quee modificar el html y poner en stroke currentColor para que coja el color que le pongo desde css*/
+.botonColeWebley:hover svg path{
   
-  fill
+  stroke:#141A20;
   
 }
 
