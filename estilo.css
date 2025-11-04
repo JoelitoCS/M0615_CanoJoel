@@ -75,10 +75,124 @@ body {
   color: black;
 }
 
-.header .logo img {
+.barraNavegacion img {
   width: 100px;
   display: block;
+  margin-right: 50px;
 }
+
+.barraNavegacion {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.listaMenu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.itemMenu a {
+  display: inline-flex; /*Alinea texto + SVG en línea */
+  align-items: center; /*Centra verticalmente ambos*/
+  gap: 6px; /* Espacio entre el texto y el icono */
+  text-decoration: none; /* Sin subrayado */
+  color: #141A20;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.itemMenu a p {
+  margin: 0; /* Elimina margen del <p> */
+  display: inline; /* Asegura que no salte de línea */
+}
+
+/* De primeras le digo que la imagen por defecto se rote a la posición que yo quiero */
+.itemMenu a svg {
+  transform: rotate(90deg);
+  width: 16px;   /* Tamaño ajustado */
+  height: 16px;
+  color: inherit; /* Hereda el color del texto */
+  transition: 0.5s;
+  margin-left: 10px;
+  
+}
+
+/* Efecto rotación o color al pasar el ratón, en este caso 270 deg para que quede mirando hacia arriba*/
+.itemMenu:hover a svg {
+  transform: rotate(270deg);
+}
+
+.listaMenu a {
+  text-decoration: none;
+  color: #222;
+  padding: 0.75rem 1rem;
+  display: block;
+  font-weight: 500;
+ 
+}
+
+.listaMenu a:hover {
+  background-color: #1ab7ea;
+  border-radius: 10px;
+}
+
+/* Mega menú */
+.megaMenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  width: 900px;
+  border-radius: 12px;
+  padding: 3rem;
+  justify-content: space-between;
+  z-index: 5;
+  /* para que se sobreponga ante todo */
+}
+
+.itemMenu:hover .megaMenu {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Columnas dentro del mega menú */
+.columnaMega {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.columnaMega h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #111;
+  font-weight: 600;
+}
+
+.columnaMega a {
+  color: #444;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.columnaMega a:hover {
+  background-color: #1ab7ea;
+  
+}
+
 
 /* Video de fondo */
 .videoBackground {
