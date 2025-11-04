@@ -321,16 +321,16 @@ body {
 
   /* aqui le digo que el grid sea de columnas y que se repitan 3 videos en 1 fila */
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   justify-items: center;
-  padding: 28px;
-  
+  padding: 8px; 
 }
 
 .videoCardItem {
-  width: 320px;     /* ancho de la tarjeta */
+  width: 100%;
+  max-width: 380px;     /* ancho de la tarjeta */
   text-align: left;
 }
 
@@ -342,6 +342,7 @@ body {
   object-fit: cover;
   border-radius: 12px;
   background: #111;
+
 }
 
 .subtitulosParteNegra {
