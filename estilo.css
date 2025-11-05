@@ -176,6 +176,8 @@ body {
   display: flex;
   gap: 40px;
   justify-content: space-between;
+  opacity: 100%;
+  flex-wrap: wrap;
 }
 
 /* Columnas dentro del mega menú */
@@ -685,6 +687,97 @@ body {
   font-size: 16px;
   vertical-align: middle;
 }
+
+.seccionIA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background-color: #0f141a;
+  color: white;
+  padding: 80px 120px;
+  min-height: 800px;
+  font-family: "Lexend", sans-serif;
+}
+
+.textoIA {
+  flex: 1;
+  max-width: 600px;
+}
+
+.textoIA h2 {
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.tarjetaIA {
+  background-color: #1c232b;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+.tarjetaIA h3 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.tarjetaIA p {
+  color: #a7b0bb;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.tarjetaIA button {
+  background: white;
+  color: #0f141a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Lexend", sans-serif;
+  text-align: center;
+}
+
+
+.tarjetaIA svg {
+  width: 20px;
+}
+
+.tarjetaIA button:hover {
+  background-color: #141A20;
+  color: white;
+}
+
+.listaIA {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listaIA li {
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.listaIA li:hover {
+  color: #00b6f0;
+}
+
+
+.videoIA video {
+  width: 750px;
+  height: auto;
+  border-radius: 20px;
+  margin: auto;
+}
+
 
 /* =======================
    MODO MÓVIL (RESPONSIVE)
