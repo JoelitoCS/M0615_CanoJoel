@@ -5,12 +5,14 @@ body {
   color: #141A20;
   margin: 0;
   padding: 0;
+  padding-top: 80px;
 }
 
 .headerDerecha {
   display: flex;
   align-items: center; /* centra verticalmente los botones y la barra */
   gap: 15px;
+  margin-right: 10px;
 }
 
 .tresBarras {
@@ -65,14 +67,23 @@ body {
   background-color: rgb(169, 169, 235);
 }
 
+
 /* Encabezado */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background-color: white;
   color: black;
+  position: fixed;
+  top: 0;
+  z-index: 999; 
+  /* para que nadie se sobreponga antes que el */
+  right: 0;
+  left: 0;
+  text-align: center;
+  opacity: 87%;
+  font-weight: 900;
 }
 
 .barraNavegacion img {
@@ -86,7 +97,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 15px;
   position: relative;
 }
 
@@ -95,7 +106,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 20px;
+  gap: 10px;
 }
 
 .itemMenu a {
@@ -123,7 +134,6 @@ body {
   color: inherit; /* Hereda el color del texto */
   transition: 0.5s;
   margin-left: 10px;
-  
 }
 
 /* Efecto rotación o color al pasar el ratón, en este caso 270 deg para que quede mirando hacia arriba*/
@@ -198,17 +208,19 @@ body {
 .videoBackground {
   border-radius: 20px;
   background-color: rgb(250, 250, 211);
-  width: 960px;
+  width: 1260px;
   margin: 24px auto;
   height: 829px;
   justify-items: center;
   position: relative;
   overflow: hidden;
+  
 }
 
 .videoFondo video {
   position: absolute; /* video en fondo */
-  top: 0;
+  /* top 0 y left 0 para que ocupe todo el ancho del div */
+  top: 0; 
   left: 0;
   width: 100%;
   height: 100%;
@@ -268,8 +280,26 @@ body {
 }
 
 .barraVideo {
-  width: 100%;
-  margin: 12px 0 32px 0;
+  width: 100%; /* ancho visible */
+  overflow: hidden;  /* oculta lo que sale, ya que sin esto se veria un scroll hacia la derecha y podria ver todo lo que sale desde la derecha fuera de la web*/
+  z-index: 1;
+}
+
+#imagenesBarra{
+  display: flex;
+  width: 200%; 
+  animation: moverIzquierda 10s linear infinite; 
+  /* le digo que haga una animación de 10s que sea infinita  */
+}
+
+/* utilizo keyframes para poder hacer la imagen infinita y le digo que pase de 0 a -50%, lo que quiere decir que ira hacia la izquierda */
+@keyframes moverIzquierda {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .barraVideo img {
@@ -300,12 +330,13 @@ body {
 
 /* Trozo negro */
 .trozoNegro {
-  margin: 0;
+  margin: auto;
   padding: 40px 0;
   background-color: #141A20;
   color: white;
   width: 100%;
   text-align: center;
+  
 }
 
 .textoFondoNegro {
@@ -325,7 +356,6 @@ body {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  padding: 8px; 
 }
 
 .videoCardItem {
@@ -392,12 +422,14 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: center;
+  padding-left: 300px;
 }
 
 .videoColeWebley .videoCard {
   height: 785px;
   border-radius: 12px;
   width: 576px;
+  margin-right: 40px;
 }
 
 .subituloParteColeWebley {
@@ -460,34 +492,69 @@ body {
   justify-content: center;
 }
 
+
+#listaAlLadoVideo {
+  width: 100%;
+}
+
+#listaAlLadoVideo ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 #listaAlLadoVideo li {
   list-style: none;
+  margin-top: 18px;
 }
 
 #listaAlLadoVideo a {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
   text-decoration: none;
   color: #141A20;
   font-weight: 600;
+  font-size: 18px;
 }
 
-#listaAlLadoVideo p {
-  text-decoration: none;
+#listaAlLadoVideo img {
+  width: 30px;
+  height: 30px;
+}
+
+#listaAlLadoVideo div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#listaAlLadoVideo a p {
+  margin: 5px 0 0;
   color: #4C5864;
   font-weight: 400;
+  font-size: 16px;
 }
 
 #listaAlLadoVideo svg {
-  margin-left: 15px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0; 
+  /* para que las flechas no se deformen las flechas ni cambien de tamaño */
+  margin-left: auto;
 }
+
 
 #videoConListaJuntos{
   display: flex;
   align-items: stretch;
   justify-content: center;
   gap: 2rem;
-  max-width: 1200px;
+  min-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  
 }
 
 
@@ -497,6 +564,108 @@ body {
   padding: 20px;
   background-color: white;
   color: #141A20;
+}
+
+#comentariosDeslizando{
+  background-color:#F1F5F9;
+  padding: 32px 0;
+  width: 100%;
+  height: 400px;
+}
+
+#comentariosDeslizando h3{
+  text-align: center;
+  font-weight: 480;
+}
+
+.testimonios {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #F5F9FD;
+}
+
+.testimonios h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #141A20;
+  margin-bottom: 40px;
+  font-family: "Lexend", sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  width: 330px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.comillas {
+  font-size: 60px;
+  color: #E5EAF0;
+  line-height: 0.5;
+  margin-bottom: 10px;
+}
+
+.texto {
+  color: #141A20;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.estrellas {
+  color: #F8CE0B;
+  font-size: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.perfil img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nombre {
+  font-weight: 600;
+  font-size: 15px;
+  color: #141A20;
+}
+
+.rol {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.verificado {
+  color: #00B6F0;
+  font-size: 16px;
+  vertical-align: middle;
 }
 
 /* =======================
@@ -510,6 +679,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .headerDerecha {
