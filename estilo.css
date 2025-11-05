@@ -798,7 +798,7 @@ body {
 @media (max-width: 768px) {
 
   
-    /* Ocultar el menú principal de escritorio */
+  /* Ocultar el menú principal de escritorio */
   .listaMenu {
     display: none !important;
   }
@@ -807,20 +807,14 @@ body {
   .headerDerecha {
     display: flex !important;
     align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-right: 15px;
-    background: white;
-    z-index: 1000;
-    position: relative;
+    
+
   }
 
   /* Mostrar los botones */
   .headerDerecha .btnTransparente,
   .headerDerecha .btnDefecto {
     display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
   }
 
   /* Mostrar el icono de tres barras en móvil */
@@ -836,10 +830,24 @@ body {
     justify-content: space-between !important;
     align-items: center !important;
     padding: 10px 15px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .barraNavegacion img {
     width: 90px;
+    margin: 0;
+  }
+
+   .barraNavegacion {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
     margin: 0;
   }
 
@@ -931,9 +939,9 @@ body {
   }
 
   .subtitulosParteNegra svg{
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
+    display: inline-flex;
+    margin-left: 20px;
+    margin-top: 7px;
 }
 
   .videoCardItem {
@@ -941,12 +949,141 @@ body {
     min-width: 560px;
   }
 
-  .videoColeWebley {
-    height: auto;
+  /* Contenedor principal */
+  #videoConListaJuntos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 100%;
+    padding: 0 16px;
+    gap: 2rem;
   }
 
+  /* Video: ancho completo con bordes suaves */
+  .videoColeWebley .videoCard {
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    height: 400px;
+    border-radius: 16px;
+    margin-right: 20px;
+    display: flex;
+    
+  }
+
+  /* Bloque de texto y botón debajo del video */
+  .tituloColeWebley {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .tituloColeWebley h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .parrafoPostTitulo p {
+    font-size: 15px;
+    color: #4C5864;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .botonColeWebley {
+    background-color: #141A20;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Lexend", sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    width: 85%;
+    max-width: 280px;
+  }
+
+  .botonColeWebley:hover {
+    background-color: white;
+    color: #141A20;
+  }
+
+  /* Lista: ahora debajo de todo */
+  #listaAlLadoVideo {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #listaAlLadoVideo ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  #listaAlLadoVideo li {
+    list-style: none;
+    background: #F8FAFC;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.3s;
+  }
+
+  #listaAlLadoVideo li:hover {
+    background: #E8F6FF;
+  }
+
+  #listaAlLadoVideo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  #listaAlLadoVideo div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #listaAlLadoVideo a {
+    text-decoration: none;
+    color: #141A20;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #listaAlLadoVideo a p {
+    color: #4C5864;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  #listaAlLadoVideo svg {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Ajustes del contenedor general */
   .solucionParaVideos {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
   }
 
   .footer {
