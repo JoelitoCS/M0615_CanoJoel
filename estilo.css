@@ -6,6 +6,8 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 80px;
+  overflow-x: hidden; 
+  /* me ahorro de poner overflows en otros div, con esto las cintas infinitas no se veran fuera del div de la pagina, no saldran de la nada o de los bordes indicados*/
 }
 
 .headerDerecha {
@@ -578,11 +580,6 @@ body {
   font-weight: 480;
 }
 
-.testimonios {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #F5F9FD;
-}
 
 .testimonios h2 {
   font-size: 24px;
@@ -592,28 +589,49 @@ body {
   font-family: "Lexend", sans-serif;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  
+.testimonios {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #F5F9FD;
 }
 
+/* contenedor visible (oculta sobrantes) */
+.cards {
+  width: 100%;
+  padding: 0;            /* importante: quitar padding lateral */
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* no centrar el contenido: arrancará en la esquina izquierda */
+}
+
+/* cinta que se desplaza — mide su propio contenido */
+#cintaTestimonios {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  width: max-content;             /* se ajusta al contenido real */
+  min-width: 100%;                /* asegura ocupar al menos el ancho del contenedor visible */
+  animation: moverIzquierda 30s linear infinite;
+}
+
+/* pausa al pasar el ratón (opcional pero útil) */
+#cintaTestimonios:hover {
+  animation-play-state: paused;
+}
+
+/* cada card: quitar width:200% y no aplicar animación aquí */
 .card {
+  flex: 0 0 420px;                /* ancho fijo; ajusta a lo que quieras */
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  padding: 40px 30px;
-  width: 330px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 28px 25px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* evita que el contenido estire la card horizontalmente */
+  justify-content: space-between;
 }
 
 .comillas {
