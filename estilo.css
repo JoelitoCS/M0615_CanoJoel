@@ -146,7 +146,7 @@ h3{
 }
 
 .itemMenu a p {
-  margin: 0; /* Elimina margen del <p> */
+  margin: 0; /* Elimina margen del p */
   display: inline; /* Asegura que no salte de línea */
 }
 
@@ -163,6 +163,11 @@ h3{
 /* Efecto rotación o color al pasar el ratón, en este caso 270 deg para que quede mirando hacia arriba*/
 .itemMenu:hover a svg {
   transform: rotate(270deg);
+}
+
+.listaMenu p {
+  font-size: 16px;
+ 
 }
 
 .listaMenu a {
@@ -217,7 +222,9 @@ h3{
   margin-left: 70px;
 }
 
-
+.columnaMega h3{
+  font-size: 18px;
+}
 
 .columnaMega a {
   color: #444;
