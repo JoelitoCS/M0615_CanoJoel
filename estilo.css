@@ -406,6 +406,7 @@ h3{
 .videosParteNegra p{
   color: #a9b2bc;
   font-size: 16px;
+  margin-bottom: 40px;
 }
 
 .videosParteNegra button{
@@ -430,7 +431,7 @@ h3{
   object-fit: cover;
   border-radius: 12px;
   background: #111;
-  
+  margin-bottom: 23px;
 
 }
 
@@ -439,7 +440,7 @@ h3{
   color: #fff;
   font-weight: 700;
   margin-top: 12px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .subtitulosParteNegra svg{
@@ -469,11 +470,24 @@ h3{
 
 }
 
+.botonParteNegra span {
+  width: 250px;
+
+}
+
 .videoCardItem button {
   
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-weight: bold;
+  
+}
+
+
+.videoCardItem button svg {
+  
+  margin-left: 70px;
   
 }
 
@@ -666,6 +680,7 @@ h3{
   padding: 0;            /* importante: quitar padding lateral */
   margin: 0 auto;
   box-sizing: border-box;
+  overflow: hidden;
   /* no centrar el contenido: arrancará en la esquina izquierda */
 }
 
@@ -674,9 +689,11 @@ h3{
   display: flex;
   gap: 24px;
   align-items: stretch;
-  width: max-content;             /* se ajusta al contenido real */
+  width: fit-content;             /* se ajusta al contenido real */
   min-width: 100%;                /* asegura ocupar al menos el ancho del contenedor visible */
   animation: moverIzquierda 30s linear infinite;
+  overflow: hidden;
+  
 }
 
 /* pausa al pasar el ratón (opcional pero útil) */
@@ -922,6 +939,7 @@ h3{
 @media (max-width: 768px) {
 
   
+
   /* Ocultar el menú principal de escritorio */
   .listaMenu {
     display: none !important;
