@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   background-color: #FAFCFD;
   color: #141A20;
   margin: 0;
@@ -9,6 +9,21 @@ body {
   overflow-x: hidden; 
   /* me ahorro de poner overflows en otros div, con esto las cintas infinitas no se veran fuera del div de la pagina, no saldran de la nada o de los bordes indicados*/
 }
+
+h2{
+  font-size: 40px;
+  color: #0A0E12;
+}
+
+p{
+  font-size: 20px;
+  color: #4C5864;
+}
+
+h3{
+  font-size: 24px;
+}
+
 
 .headerDerecha {
   display: flex;
@@ -35,7 +50,7 @@ body {
   justify-content: center;
   font-size: 16px;
   width: 177px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   color: inherit;
 }
 
@@ -60,7 +75,7 @@ body {
   width: 177px;
   text-align: center;
   justify-content: center;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   cursor: pointer;
 }
 
@@ -124,7 +139,7 @@ body {
   gap: 6px; /* Espacio entre el texto y el icono */
   text-decoration: none; /* Sin subrayado */
   color: #141A20;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   font-weight: 500;
   font-size: 15px;
   transition: color 0.2s ease;
@@ -256,7 +271,7 @@ body {
 }
 
 .botonesVideo button {
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
 }
 
 .textosVideo {
@@ -286,6 +301,12 @@ body {
 }
 
 /* Texto posterior al video */
+.textoPostVideo {
+  width: 490px;
+  margin: 30px auto;
+  text-align: center;
+}
+
 .textoPostVideo {
   width: 490px;
   margin: 30px auto;
@@ -336,7 +357,7 @@ body {
 }
 
 .textosConFondoDif {
-  width: 490px;
+  width: 700px;
   margin: 30px auto;
   text-align: center;
 }
@@ -354,7 +375,7 @@ body {
 
 .textoFondoNegro {
   text-align: center;
-  width: 600px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -365,16 +386,33 @@ body {
 
   /* aqui le digo que el grid sea de columnas y que se repitan 3 videos en 1 fila */
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  /* para poner los botones alineados si no se van hacia abajp */
   justify-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+
+.videosParteNegra p{
+  color: #a9b2bc;
+  font-size: 16px;
+}
+
+.videosParteNegra button{
+  text-align: start;
+  align-items: end;
 }
 
 .videoCardItem {
   width: 100%;
   max-width: 380px;     /* ancho de la tarjeta */
   text-align: left;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .videoCard {
@@ -385,6 +423,7 @@ body {
   object-fit: cover;
   border-radius: 12px;
   background: #111;
+  
 
 }
 
@@ -401,7 +440,7 @@ body {
 }
 
 .botonParteNegra {
-  margin-top: 12px;
+  margin-top: auto;
   padding: 14px 18px;
   background: #2b3438;
   color: #fff;
@@ -409,7 +448,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
 }
 
 .botonParteNegra:hover {
@@ -443,7 +482,7 @@ body {
 }
 
 .videoColeWebley .videoCard {
-  height: 785px;
+  height: 880px;
   border-radius: 12px;
   width: 576px;
   margin-right: 40px;
@@ -480,7 +519,7 @@ body {
   border-radius: 10px;
   border: none;
   font-size: 16px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   cursor: pointer;
 }
 
@@ -525,6 +564,10 @@ body {
 #listaAlLadoVideo li {
   list-style: none;
   margin-top: 18px;
+}
+
+#listaAlLadoVideo:hover li {
+  color: #00B6F0;
 }
 
 #listaAlLadoVideo a {
@@ -601,7 +644,7 @@ body {
   font-weight: 600;
   color: #141A20;
   margin-bottom: 40px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
 }
 
 .testimonios {
@@ -710,7 +753,7 @@ body {
   color: white;
   padding: 80px 120px;
   min-height: 800px;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
 }
 
 .textoIA {
@@ -751,7 +794,7 @@ body {
   border-radius: 15px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "Lexend", sans-serif;
+  font-family: 'ABC Repro';
   text-align: center;
 }
 
@@ -790,6 +833,80 @@ body {
   border-radius: 20px;
   margin: auto;
 }
+
+.seccionSeguridad{
+
+  padding: 0px 260px 40px 260px;
+  padding-top: 30px;
+  display: flex;
+
+}
+
+.seccionSeguridad h3{
+
+  font-size: 18px;
+
+}
+
+#trozoIzquierdaSeguridad h2{
+  font-size: 40px;
+  width: 600px;
+}
+
+#trozoIzquierdaSeguridad p{
+  width: 600px;
+  margin-left: 20px;
+  color: #4C5864;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: start;
+}
+
+#trozoIzquierdaSeguridad button{
+  display: flex;
+  width: 300px;
+  text-align: start;
+  margin-top: 50px;
+}
+
+#trozoIzquierdaSeguridad button svg{
+  width: 50px;
+  display: flex;
+  margin-top: 17px;
+}
+
+#trozoDerechaSeguridad{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+  gap: 20px; /* espacio entre columnas/filas */
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  margin-left: 150px;
+  margin-top: 60px;
+}
+
+#trozoDerechaSeguridad img{
+  width: 160px;
+  height: 20px;
+}
+
+#trozoDerechaSeguridad h3{
+  font-weight: bold;
+  width: 120px;
+}
+
+#videoSeguridad video{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  margin: auto;
+  
+}
+
+
 
 
 /* =======================
@@ -1001,7 +1118,7 @@ body {
     padding: 12px 20px;
     border-radius: 10px;
     font-size: 16px;
-    font-family: "Lexend", sans-serif;
+    font-family: 'ABC Repro';
     cursor: pointer;
     display: flex;
     justify-content: center;
