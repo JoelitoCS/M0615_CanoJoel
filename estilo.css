@@ -1130,10 +1130,9 @@ h3{
 }
 
 
-
 .btnAzul {
-  background-color: #00b4f1;
-  color: white;
+  background-color: #17d5ff;
+  color: black;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -1309,6 +1308,10 @@ h3{
 
 #recursosYEmpresa h3{
   font-size: 24px;
+}
+
+#footerMovil{
+  display: none;
 }
 
 
@@ -1766,7 +1769,7 @@ h3{
   }
 
   /* Trozo derecha: en móvil lo mostramos debajo del texto.
-     Queremos: primero "barra - h3 - barra" (Tranquilidad incluida) y después los iconos/logos. */
+     querioo: primero barra - h3 - barra (Tranquilidad incluida) y después los iconos/logos. */
   #trozoDerechaSeguridad {
     order: 2; /* después del trozo izquierdo dentro de #dosTrozosSeguridad */
     width: 100%;
@@ -1782,9 +1785,7 @@ h3{
     box-sizing: border-box;
   }
 
-  /* Seleccionamos los elementos que son directos hijos de #trozoDerechaSeguridad.
-     En tu HTML los <img> (barras) y el <h3> "Tranquilidad incluida" son hijos directos.
-     Los iconos (cada logo+texto) están dentro de <div> hijos; esos los dejaremos al final. */
+  
   #trozoDerechaSeguridad > img,
   #trozoDerechaSeguridad > h3 {
     /* los ponemos antes que los divs (las barras y el h3 "Tranquilidad incluida") */
@@ -1844,16 +1845,62 @@ h3{
     display: block;
   }
 
+  .seccionComunidad{
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+  }
+
+  #videoComunidad video {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  #videoComunidad{
+    order: 9;
+    margin-top: 30px;
+  }
+
+
+  #textosComunidad{
+    margin: auto;
+  }
+
   #textosYVideoComunidad{
     display: flex;
     flex-direction: column;
   }
 
-  .tarjetasContainer, .infoExtraContainer {
-    flex-wrap: nowrap; /* 🔥 Mantiene las cards en fila */
+  .tarjetasContainer {
+    flex-wrap: nowrap; 
     justify-content: flex-start;
-    overflow-x: auto; /* 🔥 Permite scroll lateral */
     gap: 20px;
+  }
+
+  .infoExtraContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 20px;
+  }
+
+  .infoExtraContainer button{
+    width: 600px;
+    text-align: start;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+  }
+
+  .infoExtraContainer svg{
+    margin-left: 220px;
+  }
+
+  .btnAzul svg{
+    margin-left: 470px;
   }
 
   .tarjetaItem, .bloqueInfo {
@@ -1864,8 +1911,15 @@ h3{
   }
 
 
-  .footer {
-    text-align: center;
-    font-size: 13px;
+  #footerMovil{
+    display: flex;
+    flex-direction: column;
+    text-align: start !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  #footerContent {
+    display: none;
   }
 }
