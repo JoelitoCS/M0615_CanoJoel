@@ -1,5 +1,6 @@
 /* Estilos generales */
-body {
+/* le pongo important para que cargue siempre bien, antes habian veces que al cambiar de pagina se ponia la tipografia por defecto */
+body, html {
   font-family: 'ABC Repro';
   background-color: #FAFCFD;
   color: #141A20;
@@ -52,6 +53,7 @@ h3{
   width: 177px;
   font-family: 'ABC Repro';
   color: inherit;
+  font-weight: bold;
 }
 
 .btnTransparente svg{
@@ -77,6 +79,7 @@ h3{
   justify-content: center;
   font-family: 'ABC Repro';
   cursor: pointer;
+  font-weight: bold;
 }
 
 .btnDefecto svg {
@@ -131,6 +134,7 @@ h3{
   margin: 0;
   padding: 0;
   gap: 10px;
+  
 }
 
 .itemMenu a {
@@ -148,7 +152,10 @@ h3{
 .itemMenu a p {
   margin: 0; /* Elimina margen del p */
   display: inline; /* Asegura que no salte de línea */
+  color:#0A0E12;
+  font-weight: bold;
 }
+
 
 /* De primeras le digo que la imagen por defecto se rote a la posición que yo quiero */
 .itemMenu a svg {
@@ -223,6 +230,10 @@ h3{
 }
 
 .columnaMega h3{
+  font-size: 18px;
+}
+
+.columnaMega h2{
   font-size: 18px;
 }
 
@@ -329,8 +340,8 @@ h3{
 #imagenesBarra{
   display: flex;
   width: 200%; 
-  animation: moverIzquierda 10s linear infinite; 
-  /* le digo que haga una animación de 10s que sea infinita  */
+  animation: moverIzquierda 30s linear infinite; 
+  /* le digo que haga una animación de 30s que sea infinita y siga un movimiento lineal */
 }
 
 /* utilizo keyframes para poder hacer la imagen infinita y le digo que pase de 0 a -50%, lo que quiere decir que ira hacia la izquierda */
@@ -860,9 +871,16 @@ h3{
 
 .seccionSeguridad{
 
-  padding: 0px 260px 40px 260px;
-  padding-top: 30px;
+  padding: 30px 260px 40px 260px;
   display: flex;
+  flex-direction: column;
+
+}
+
+#dosTrozosSeguridad{
+
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -923,14 +941,88 @@ h3{
 #videoSeguridad video{
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: auto;
+  width: 1370px;
+  height: 650px;
   border-radius: 20px;
-  margin: auto;
+  margin-bottom: 55px;
+}
+
+.seccionComunidad{
+  background-color: #141A20;
+  padding: 56px 100px 56px 280px;
+  margin: 0;
+  top: 0;
+}
+
+#videoComunidad video{
+  width: 563px;
+  height: 422px;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+#lineaColor img, .seccionComunidad{
+  width: 100%;
+  display: block;
+}
+
+#lineaGrisacea img, .seccionComunidad{
+  width: 100%;
+  display: block;
+}
+
+#textosYVideoComunidad{
+  display: flex;
+}
+
+#textosComunidad h2{
+
+  width: 600px;
+  line-height: 1.1;
+
+}
+
+#textosComunidad p{
+
+  width: 600px;
   
 }
 
+#botonComunidad {
+  border: none;
+  padding: 10px;
+  width: 600px;
+  border-radius: 10px;
+  text-align: center;
+  background: none;
+  color: white;
+  font-family: 'ABC Repro';
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+}
 
+#botonComunidad:hover {
+  color: #141A20;
+  background-color: white;
+}
+
+#botonComunidad button {
+  
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  
+}
+
+#botonComunidad svg {
+
+  margin-left: 400px;
+  text-align: center;
+  align-items: center;
+  
+}
 
 
 /* =======================
@@ -1293,6 +1385,11 @@ h3{
     margin-bottom: 16px;
     font-size: 15px;
     color: #fff;
+  }
+
+  #textosYVideoComunidad{
+    display: flex;
+    flex-direction: column;
   }
 
 
