@@ -6,7 +6,7 @@ body, html {
   color: #141A20;
   margin: 0;
   padding: 0;
-  padding-top: 80px;
+  padding-top: 40px;
   overflow-x: hidden; 
   /* me ahorro de poner overflows en otros div, con esto las cintas infinitas no se veran fuera del div de la pagina, no saldran de la nada o de los bordes indicados*/
 }
@@ -95,11 +95,12 @@ h3{
 
 
 /* Encabezado */
-.header {
+.header nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7); /* blanco opaco */
+  backdrop-filter: blur(60px); /* efecto de cristal difuminado, para darle el toque que le da vimeo, le añade como una especie de filtro que en español es borroso */
   color: black;
   position: fixed;
   top: 0;
@@ -108,9 +109,10 @@ h3{
   right: 0;
   left: 0;
   text-align: center;
-  opacity: 87%;
   font-weight: 900;
 }
+
+
 
 .barraNavegacion img {
   width: 100px;
@@ -125,8 +127,9 @@ h3{
   justify-content: space-between;
   padding: 15px;
   position: relative;
-  margin-left: 300px;
+  padding-left: 300px;
 }
+
 
 .listaMenu {
   list-style: none;
@@ -1663,8 +1666,6 @@ h3{
     width: 100%;
   }
 
- 
-
   .listaIA li {
     margin-bottom: 16px;
     font-size: 15px;
@@ -1674,6 +1675,20 @@ h3{
   #textosYVideoComunidad{
     display: flex;
     flex-direction: column;
+  }
+
+  .tarjetasContainer, .infoExtraContainer {
+    flex-wrap: nowrap; /* 🔥 Mantiene las cards en fila */
+    justify-content: flex-start;
+    overflow-x: auto; /* 🔥 Permite scroll lateral */
+    gap: 20px;
+  }
+
+  .tarjetaItem, .bloqueInfo {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 
