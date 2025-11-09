@@ -843,25 +843,169 @@
       <img src="imagenes/lineaGrises.png" alt="Linea2">
     </div>
 
-    <div class="lastVimeo">
-      <h2>Descubra lo último de Vimeo</h2>
-      <div id="dosCartas">
+  <div id="lastVimeo">
+    <h2 id="tituloPrincipal">Descubra lo último de Vimeo</h2>
 
-        <div id="cartaIzquierda">
+    <div class="tarjetasContainer">
+      <div class="tarjetaItem" id="tarjetaLanzamiento">
+        <span class="etiquetaNuevo">Nuevo</span>
+        <p class="descripcionTarjeta">
+          Explore nuestros últimos lanzamientos y mejoras de productos.
+        </p>
+        <button class="btnNegro">Ver más <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></button>
+        <img src="https://vimeo.bynder.com/transform/8d1b94af-c5aa-4c46-9f7c-1b9039272789/Summer-2025-blog-release?io=transform:fill,width:3200&amp;quality=80" alt="Lanzamiento Summer 2025" class="imagenTarjeta">
+      </div>
 
-        </div>
-        <div id="cartaDerecha">
-
-        </div>
-
+      <div class="tarjetaItem" id="tarjetaStreaming">
+        <span class="etiquetaNuevo">Nuevo</span>
+        <p class="descripcionTarjeta">
+          Cree y monetice su propio servicio de transmisión de video con Vimeo Streaming.
+        </p>
+        <button class="btnNegro">Ver más <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></button>
+        <img src="https://i.vimeocdn.com/custom_asset/c7f4134846c3c70023096471a7d16c15?w=3200&amp;q=80" alt="Vimeo Streaming" class="imagenTarjeta">
       </div>
     </div>
 
+    <div class="infoExtraContainer">
+      <div class="bloqueInfo" id="bloqueProbarGratis">
+        <h3 class="tituloBloque">Probar gratis</h3>
+        <ul class="listaOpciones">
+          <li>Precio</li>
+          <li>Comunicarse con Ventas</li>
+          <li>Ver demostraciones</li>
+        </ul>
+        <button class="btnAzul">Unirse <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+      </div>
+
+      <div class="bloqueInfo" id="bloqueAtencionCliente">
+        <h3 class="tituloBloque">Atención al cliente 24x7</h3>
+        <p class="textoBloque">
+          Nuestro equipo de asistencia al cliente está disponible las 24 horas, los 7 días de la semana.
+          Los miembros de Enterprise también tienen acceso a administradores de cuentas especializados
+          y a un ANS de tiempo de actividad garantizado.
+        </p>
+        <button class="btnGris">Contactar al equipo de asistencia <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" fill="none" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+      </div>
+    </div>
+  </div>
+
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 Joel Cano, Inc.</p>
-  </footer>
+  <footer id="footerVimeo">
+  <div id="footerContent">
+    
+    <div class="footerColumn" id="columnaProducto">
+      <h3 class="footerTitulo">Producto</h3>
+      <div class="footerSubColumna">
+        <div>
+          <h4 class="footerSubtitulo">Productos</h4>
+          <ul class="footerLista">
+            <li>Reproductor de video</li>
+            <li>Alojamiento de videos</li>
+            <li>Editor de videos</li>
+            <li>Realizador de videos</li>
+            <li>Grabar</li>
+            <li>Transmisión en vivo</li>
+            <li>Seminarios web</li>
+            <li>Videoteca</li>
+            <li>Vimeo AI</li>
+            <li>Colaboración de video</li>
+            <li>Estadísticas del video</li>
+            <li>Centro de integraciones</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footerSubtitulo">Funciones</h4>
+          <ul class="footerLista">
+            <li>Aplicaciones móviles</li>
+            <li>Teleprompter</li>
+            <li>Transcripción de videos</li>
+            <li>Leyendas automáticas</li>
+            <li>Herramienta de recorte de videos</li>
+            <li>Seguridad</li>
+            <li>Creador de gif</li>
+            <li>Convertir imagen a video</li>
+            <li>Traducción de IA</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footerSubtitulo">Vimeo para</h4>
+          <ul class="footerLista">
+            <li>Empresas</li>
+            <li>Pequeñas empresas</li>
+            <li>Profesionales creativos</li>
+            <li>Educadores</li>
+            <li>Profesionales del marketing</li>
+            <li>Comunicaciones corporativas</li>
+            <li>Aprendizaje y desarrollo</li>
+            <li>Salud</li>
+            <li>Venta minorista</li>
+            <li>Servicios financieros</li>
+            <li>Tecnología</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footerSubtitulo">Soluciones</h4>
+          <ul class="footerLista">
+            <li>Vimeo Central</li>
+            <li>Vimeo Marketing</li>
+            <li>Vimeo Streaming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+      <div id="recursosYEmpresa">
+        <div class="footerColumn" id="columnaRecursos">
+          <h3 class="footerTitulo">Recursos</h3>
+          <ul class="footerLista">
+            <li>Centro de ayuda</li>
+            <li>Contactar al equipo de asistencia</li>
+            <li>Historias de los clientes</li>
+            <li>Eventos y seminarios web</li>
+            <li>Blog</li>
+            <li>Programadores</li>
+            <li>Directrices</li>
+            <li>Ver</li>
+            <li>Kit multimedia</li>
+            <li>Socios</li>
+          </ul>
+        </div>
+
+        <div class="footerColumn" id="columnaEmpresa">
+          <h3 class="footerTitulo">Empresa</h3>
+          <ul class="footerLista">
+            <li>Acerca de Vimeo</li>
+            <li>Carreras</li>
+            <li>Cultura</li>
+            <li>Relaciones con los inversores</li>
+            <li>Noticias sobre productos</li>
+            <li>Mapas del sitio</li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  
+
+
+</footer>
+
 </body>
 
 </html>

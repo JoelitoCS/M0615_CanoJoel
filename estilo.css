@@ -74,7 +74,7 @@ h3{
   font-size: 16px;
   border-radius: 15px;
   border: none;
-  width: 177px;
+  width: 188px;
   text-align: center;
   justify-content: center;
   font-family: 'Montserrat', Arial, sans‑serif;
@@ -834,7 +834,7 @@ h3{
 }
 
 
-.tarjetaIA svg {
+.tarjetaIA button svg {
   width: 20px;
 }
 
@@ -881,7 +881,7 @@ h3{
 
   display: flex;
   flex-direction: row;
-
+  margin-bottom: 50px;
 }
 
 .seccionSeguridad h3{
@@ -914,7 +914,7 @@ h3{
 #trozoIzquierdaSeguridad button svg{
   width: 50px;
   display: flex;
-  margin-top: 17px;
+  margin-top: 10px;
 }
 
 #trozoDerechaSeguridad{
@@ -925,7 +925,7 @@ h3{
   align-items: center;
   justify-items: center;
   margin-left: 150px;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 
 #trozoDerechaSeguridad img{
@@ -1000,6 +1000,7 @@ h3{
   font-size: 16px;
   cursor: pointer;
   display: flex;
+  margin-top: 50px;
 }
 
 #botonComunidad:hover {
@@ -1026,6 +1027,285 @@ h3{
 
 .lastVimeo h2{
   text-align: center;
+}
+
+.tarjetasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tarjetaItem {
+  background-color: #F1F5F9;
+  border-radius: 16px;
+  padding: 30px;
+  width: 480px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.tarjetaItem:hover {
+  background-color: #FAFCFD;
+}
+
+.tarjetaItem:hover button {
+  background-color: white;
+  color: #0A0E12;
+}
+
+.etiquetaNuevo {
+  background-color: #e0f3ff;
+  color: #0073ff;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.descripcionTarjeta {
+  margin: 15px 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btnNegro {
+  background-color: #0f0f0f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.btnNegro svg{
+  width: 18px;
+  height: 18px;
+}
+
+.btnNegro:hover {
+  background-color: #333;
+}
+
+.imagenTarjeta {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.infoExtraContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 80px 0;
+}
+
+.bloqueInfo {
+  width: 420px;
+}
+
+.tituloBloque {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.listaOpciones {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.listaOpciones:hover li {
+  color: #00B6F0;
+}
+
+
+
+.btnAzul {
+  background-color: #00b4f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.btnAzul svg{
+  width: 18px;
+  height: 18px;
+}
+
+.btnAzul:hover {
+  background-color: #00a1d7;
+}
+
+.btnGris {
+  background-color: #eef1f4;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.btnGris svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btnGris:hover {
+  background-color: #d9dde2;
+}
+
+#tituloPrincipal {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+#footerVimeo {
+  color: #0f0f0f;
+  padding: 60px 5% 40px 200px;
+}
+
+#footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap; /* 🔥 Mantiene todo en una sola línea */
+  overflow-x: auto;  /* Permite desplazamiento si se pasa del ancho */
+}
+
+.footerColumn {
+  min-width: 220px;
+  flex: 1;
+}
+
+.footerTitulo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footerSubColumna {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footerSubtitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footerLista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  line-height: 1.7;
+}
+
+.footerLista li {
+  font-size: 0.95rem;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerLista li:hover {
+  color: #0073ff;
+}
+
+#footerBottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+
+#footerRedes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+#footerRedes img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+#footerRedes img:hover {
+  opacity: 1;
+}
+
+#idiomaSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-left: 20px;
+}
+
+#idioma {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+}
+
+#footerLegal {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.footerLegalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.footerLegalLinks li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footerLegalLinks li:hover {
+  color: #0073ff;
+}
+
+#recursosYEmpresa{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#recursosYEmpresa h3{
+  font-size: 24px;
 }
 
 
