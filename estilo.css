@@ -31,7 +31,8 @@ h3{
   align-items: center; /* centra verticalmente los botones y la barra */
   gap: 15px;
   justify-content:flex-end ;
-  margin-left: 200px;
+ 
+  padding-right: 320px;
 }
 
 /* lo oculto porque es la parte de escritorio, cuando este en móvil lo muestro */
@@ -117,7 +118,7 @@ h3{
 .barraNavegacion img {
   width: 100px;
   display: block;
-  margin-right: 50px;
+  margin-left: 20px;
 }
 
 .barraNavegacion {
