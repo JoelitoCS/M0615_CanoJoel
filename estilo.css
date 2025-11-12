@@ -1332,6 +1332,7 @@ h3{
   .headerDerecha {
     display: flex !important;
     align-items: center;
+    margin-left: 250px;
     
 
   }
